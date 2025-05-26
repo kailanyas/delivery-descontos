@@ -1,0 +1,13 @@
+com\thiago\delivery\service\MetodoDescontoTaxaPorBairro.class
+com\thiago\delivery\model\Cliente.class
+com\thiago\delivery\service\IMetodoDescontoTaxaEntrega.class
+com\thiago\delivery\model\Item.class
+com\thiago\delivery\service\MetodoDescontoPorIntervaloDeData.class
+com\thiago\delivery\model\Pedido.class
+com\thiago\delivery\service\MetodoDescontoValorPedido.class
+com\thiago\delivery\Delivery.class
+com\thiago\delivery\service\MetodoDescontoPorDiaDaSemana.class
+com\thiago\delivery\service\CalculadoraDeDescontoService.class
+com\thiago\delivery\service\MetodoDescontoTipoItem.class
+com\thiago\delivery\service\MetodoDescontoTaxaPorTipoCliente.class
+com\thiago\delivery\model\CupomDescontoEntrega.class
