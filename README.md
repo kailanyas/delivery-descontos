@@ -19,5 +19,5 @@ Este projeto simula uma aplicação de delivery que permite aplicar descontos pa
 
 ## Desenvolvido por
 
-- (Kailany Alves)[https://github.com/kailanyas]
-- (Thiago Tonelli)[https://github.com/ThiagoTonelli]
+- [Kailany Alves](https://github.com/kailanyas)
+- [Thiago Tonelli](https://github.com/ThiagoTonelli)
