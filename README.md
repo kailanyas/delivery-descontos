@@ -9,13 +9,13 @@ Este projeto simula uma aplicação de delivery que permite aplicar descontos pa
 
 ## Funcionalidades
 
-- Aplicação de múltiplos métodos de desconto na taxa de entrega 
-> Desconto por bairro
-> Desconto por tipo de cliente
-> Desconto por tipo de item
-> Desconto por valor do pedido
-> Desconto por dia da semana
-> Desconto por intervalo de datas
+- Aplicação de múltiplos métodos de desconto na taxa de entrega:
+  - Desconto por bairro
+  - Desconto por tipo de cliente
+  - Desconto por tipo de item
+  - Desconto por valor do pedido
+  - Desconto por dia da semana
+  - Desconto por intervalo de datas
 - Controle de limite máximo de desconto (R$ 10,00)
 - Possibilidade de habilitar/desabilitar política de descontos
 
