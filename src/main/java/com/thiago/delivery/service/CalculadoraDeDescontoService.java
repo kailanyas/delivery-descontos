@@ -16,14 +16,17 @@ import java.util.List;
 public class CalculadoraDeDescontoService {
     private List<IMetodoDescontoTaxaEntrega> metodosDeDesconto;
     
-    public CalculadoraDeDescontoService(){
+    public CalculadoraDeDescontoService(boolean habilitar){
         metodosDeDesconto = new ArrayList<>();
-        metodosDeDesconto.add(new MetodoDescontoTaxaPorBairro());
-	metodosDeDesconto.add(new MetodoDescontoTaxaPorTipoCliente());
-	metodosDeDesconto.add(new MetodoDescontoTipoItem());
-	metodosDeDesconto.add(new MetodoDescontoValorPedido()); 
-        metodosDeDesconto.add(new MetodoDescontoPorDiaDaSemana());
-        metodosDeDesconto.add(new MetodoDescontoPorIntervaloDeData());
+        
+        if(habilitar){
+            metodosDeDesconto.add(new MetodoDescontoTaxaPorBairro());
+            metodosDeDesconto.add(new MetodoDescontoTaxaPorTipoCliente());
+            metodosDeDesconto.add(new MetodoDescontoTipoItem());
+            metodosDeDesconto.add(new MetodoDescontoValorPedido()); 
+            metodosDeDesconto.add(new MetodoDescontoPorDiaDaSemana());
+            metodosDeDesconto.add(new MetodoDescontoPorIntervaloDeData());
+        }
     }
         
     public void calcularDesconto(Pedido pedido){

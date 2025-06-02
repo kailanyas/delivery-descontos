@@ -18,7 +18,7 @@ public class Delivery {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CalculadoraDeDescontoService calculadora = new CalculadoraDeDescontoService();
+        CalculadoraDeDescontoService calculadora;
         
         Cliente cliente1 = new Cliente("Ana Claudia", "Ouro", 1, "Rua das Flores", "Centro", "Alegre");
         Item item1 = new Item("Livro UML", 1, 300.0, "Educação");
@@ -26,15 +26,19 @@ public class Delivery {
         
         pedido1.adicionarItem(item1);
         
-        System.out.println("Dados do cliente: " + cliente1.toString());
-        System.out.println("Valor da taxa de entrega: " + pedido1.toString());
+        
         
         System.out.println("Deseja aplicar descontos na taxa de entrega? (s/n) ");
         String resposta = scanner.nextLine();
         
+        System.out.println("\nDados do cliente: " + cliente1.toString());
         if(resposta.equals("s")){
+            calculadora = new CalculadoraDeDescontoService(true);
             calculadora.calcularDesconto(pedido1);
             System.out.println("Valor da taxa de entrega com descontos: " + pedido1.toString()); 
-        }      
+        }
+        else{
+            System.out.println("Valor da taxa de entrega: " + pedido1.toString());
+        }
     }
 }
