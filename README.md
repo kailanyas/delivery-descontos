@@ -21,18 +21,7 @@ Este projeto simula uma aplicação de delivery que permite aplicar descontos pa
 
 ### v2
 - Aplicação de cupom de desconto no valor total do pedido
-  - Atualmente, a aplicação aceita os seguintes cupons de desconto no valor total do pedido:
-  | Cupom       | Desconto (%) |
-  | ----------- | ------------ |
-  | DESC10      | 10%          |
-  | DESC20      | 20%          |
-  | DESC30      | 30%          |
-  | NATAL12     | 12%          |
-  | DIAPAIS12   | 12%          |
-  | PROMO10     | 10%          |
-  | DIAMAES15   | 15%          |
-  | RELAMPAGO50 | 50%          |
-
+  
 ## Tecnologias
 
 - Java
