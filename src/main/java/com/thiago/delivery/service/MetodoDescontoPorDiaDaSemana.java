@@ -23,10 +23,10 @@ public class MetodoDescontoPorDiaDaSemana implements IMetodoDescontoTaxaEntrega{
         double taxaEntrega = pedido.getTaxaEntrega();
         
         if(diaSemanaPedido == DayOfWeek.TUESDAY){
-            pedido.aplicarDesconto(new CupomDescontoEntrega("Cupom por dia da semana: Terça-Feira", taxaEntrega));
+            pedido.aplicarDescontoEntrega(new CupomDescontoEntrega("Cupom por dia da semana: Terça-Feira", taxaEntrega));
         }
         else if(diaSemanaPedido == DayOfWeek.THURSDAY){
-            pedido.aplicarDesconto(new CupomDescontoEntrega("Cupom por dia da semana: Quinta-Feira", (taxaEntrega * 0.6)));
+            pedido.aplicarDescontoEntrega(new CupomDescontoEntrega("Cupom por dia da semana: Quinta-Feira", (taxaEntrega * 0.6)));
         }
     }
     

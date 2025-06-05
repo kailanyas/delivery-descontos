@@ -20,7 +20,7 @@ public class MetodoDescontoValorPedido implements IMetodoDescontoTaxaEntrega {
     
     @Override
     public void calcularDesconto(Pedido pedido) {
-        pedido.aplicarDesconto(new CupomDescontoEntrega("Cupom por valor do pedido", VALOR_DESCONTO));
+        pedido.aplicarDescontoEntrega(new CupomDescontoEntrega("Cupom por valor do pedido", VALOR_DESCONTO));
     }
 
     @Override

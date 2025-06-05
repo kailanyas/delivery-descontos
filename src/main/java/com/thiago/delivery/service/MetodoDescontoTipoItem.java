@@ -27,7 +27,7 @@ public class MetodoDescontoTipoItem implements IMetodoDescontoTaxaEntrega {
     public void calcularDesconto(Pedido pedido) {
         for(Item item :pedido.getItens()){
             if(descontosPorTipoItem.containsKey(item.getTipo())){  
-                pedido.aplicarDesconto(new CupomDescontoEntrega("Cupom por tipo item = " + item.getTipo() +" (" + item.getNome() + ")", descontosPorTipoItem.get(item.getTipo())));
+                pedido.aplicarDescontoEntrega(new CupomDescontoEntrega("Cupom por tipo item = " + item.getTipo() +" (" + item.getNome() + ")", descontosPorTipoItem.get(item.getTipo())));
             }
         }
     }
