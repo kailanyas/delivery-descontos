@@ -28,8 +28,13 @@ public class MetodoDescontoPercentualPedido implements IMetodoDescontoPedido{
     @Override
     public void calcularDesconto(Pedido pedido, String cupomDigitado){
         double valorTotalPedido = pedido.getValorPedido(); 
-        pedido.aplicarDescontoPedido(new CupomDescontoPedido(cupomDigitado, descontosPercentualPedido.get(cupomDigitado), 
+        
+        if(descontosPercentualPedido.containsKey(cupomDigitado)){
+            pedido.aplicarDescontoPedido(new CupomDescontoPedido(cupomDigitado, descontosPercentualPedido.get(cupomDigitado), 
                                                             ((descontosPercentualPedido.get(cupomDigitado)/100) * valorTotalPedido)));
-
+        }
+        else{
+            pedido.aplicarDescontoPedido(new CupomDescontoPedido(cupomDigitado, 0.0, 0.0));
+        }   
     }
 }

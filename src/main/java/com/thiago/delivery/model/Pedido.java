@@ -53,18 +53,13 @@ public class Pedido {
             return;
         }
         else{
-        //double valorFinal = Math.min(valorDesconto, descontoDisponivel);
             if(desconto.getValorDesconto() <= descontoDisponivel){
                 cupons.add(desconto);
                 taxaEntrega -= desconto.getValorDesconto();
-                System.out.println(taxaEntrega);
-                System.out.println(desconto.getValorDesconto());
             }
             else {
-                cupons.add(desconto);
+                cupons.add(new CupomDescontoEntrega(desconto.getNomeMetodo() + " (parcial)", desconto.getValorDesconto()));
                 taxaEntrega -= descontoDisponivel;
-                System.out.println(taxaEntrega);
-                System.out.println(descontoDisponivel);
             }
         }
     }
