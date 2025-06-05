@@ -1,13 +1,17 @@
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\Delivery.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\model\Cliente.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\model\CupomDescontoEntrega.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\model\Item.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\model\Pedido.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\service\CalculadoraDeDescontoService.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\service\IMetodoDescontoTaxaEntrega.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\service\MetodoDescontoPorDiaDaSemana.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\service\MetodoDescontoPorIntervaloDeData.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\service\MetodoDescontoTaxaPorBairro.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\service\MetodoDescontoTaxaPorTipoCliente.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\service\MetodoDescontoTipoItem.java
-C:\Users\kaila\OneDrive\Documentos\faculdade\6p\Projeto de Sistemas de Software\Delivery\src\main\java\com\thiago\delivery\service\MetodoDescontoValorPedido.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\Delivery.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\model\Cliente.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\model\CupomDescontoEntrega.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\model\CupomDescontoPedido.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\model\Item.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\model\Pedido.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\CalculadoraDeDescontoService.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\IMetodoDescontoTaxaEntrega.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\MetodoDescontoPorDiaDaSemana.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\MetodoDescontoPorIntervaloDeData.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\MetodoDescontoTaxaPorBairro.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\MetodoDescontoTaxaPorTipoCliente.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\MetodoDescontoTipoItem.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\MetodoDescontoValorPedido.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\servicePedido\CalculadoraDescontoPedidoService.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\servicePedido\IMetodoDescontoPedido.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\servicePedido\MetodoDescontoPercentualPedido.java

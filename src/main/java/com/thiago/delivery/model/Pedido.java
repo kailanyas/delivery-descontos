@@ -13,11 +13,13 @@ import java.util.List;
  * @author thiag
  */
 public class Pedido {
-    private double taxaEntrega = 10;
+    private double taxaEntrega = 10.00;
     private final LocalDate data;
     private List<Item> itens = new ArrayList<>();
     private Cliente cliente;
     private List<CupomDescontoEntrega> cupons = new ArrayList<>();
+    private CupomDescontoPedido cupomPedido;
+    private double valorTotalPedido = 0;
     
     public Pedido (LocalDate data, Cliente cliente){
         this.cliente = cliente;
@@ -25,10 +27,6 @@ public class Pedido {
     }
     public void adicionarItem(Item item){
         itens.add(item);
-    }
-    
-    public double getValorPedido(){
-        return taxaEntrega;
     }
     
     public Cliente getCliente(){
@@ -48,34 +46,72 @@ public class Pedido {
         return data;
     }
     
-    public void aplicarDesconto(CupomDescontoEntrega desconto){
-       double descontoDisponivel = 10.0 - getDescontoConcedido();
-       
-       if(descontoDisponivel <= 0){
-           return;
-       }
-
-       double valorDesconto = desconto.getValorDesconto();
-       double valorFinal = Math.min(valorDesconto, descontoDisponivel);
+    public void aplicarDescontoEntrega(CupomDescontoEntrega desconto){
+        double descontoDisponivel = 10.0 - getDescontoConcedido();
         
-       if (valorFinal < valorDesconto) {
-           new CupomDescontoEntrega(desconto.getNomeMetodo() + " (parcial)", valorFinal);
-       }
-
-        taxaEntrega -= valorFinal;
+        if(descontoDisponivel <= 0){
+            return;
+        }
+        else{
+        //double valorFinal = Math.min(valorDesconto, descontoDisponivel);
+            if(desconto.getValorDesconto() <= descontoDisponivel){
+                cupons.add(desconto);
+                taxaEntrega -= desconto.getValorDesconto();
+                System.out.println(taxaEntrega);
+                System.out.println(desconto.getValorDesconto());
+            }
+            else {
+                cupons.add(desconto);
+                taxaEntrega -= descontoDisponivel;
+                System.out.println(taxaEntrega);
+                System.out.println(descontoDisponivel);
+            }
+        }
+    }
+    
+    public void aplicarDescontoPedido(CupomDescontoPedido desconto){
+        
+        if(cupomPedido == null){
+            valorTotalPedido = getValorPedido();
+            double valorDescontoPedido = desconto.getValorDescontoPedido();
+            cupomPedido = desconto;
+            valorTotalPedido -= valorDescontoPedido;
+        }
+        else if(desconto.getPercentualDesconto() > cupomPedido.getPercentualDesconto()){
+            valorTotalPedido = getValorPedido();
+            double valorDescontoPedido = desconto.getValorDescontoPedido();
+            cupomPedido = desconto;
+            valorTotalPedido -= valorDescontoPedido;
+        }
+        else {
+            System.out.println("Já existe um cupom de percentual maior aplicado");
+        }
     }
     
     public double getDescontoConcedido(){
-        return (10 - taxaEntrega);
+        return (10.00 - getTaxaEntrega());
     }
     
     public List<CupomDescontoEntrega> getCuponsDescontoEntrega(){
         return this.cupons;
     }
+    
+    public CupomDescontoPedido getCupomDescontoPedido(){
+        return this.cupomPedido;
+    }
 
     @Override
     public String toString() {
-        return "Pedido{" + "taxaEntrega=" + taxaEntrega + '}';
+        return "Pedido{" + "taxaEntrega=" + getTaxaEntrega() + ", cupomPedido=" + cupomPedido + ", valorTotalPedido=" + valorTotalPedido + '}';
     }
 
+    
+    public double getValorPedido(){  
+        double valorTotal = 0;
+        for(Item item : itens){
+            valorTotal += item.getValorTotal();
+        }
+        return valorTotal+taxaEntrega;
+    }
+    
 }

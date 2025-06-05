@@ -10,7 +10,7 @@ package com.thiago.delivery.model;
  */
 public class CupomDescontoEntrega {
     private String nomeMetodo;
-    private double valorDesconto;
+    private double valorDesconto = 0;
 
     public CupomDescontoEntrega(String nomeMetodo, double valorDesconto) {
         this.nomeMetodo = nomeMetodo;

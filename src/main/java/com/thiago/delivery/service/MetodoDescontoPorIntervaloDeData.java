@@ -43,7 +43,7 @@ public class MetodoDescontoPorIntervaloDeData implements IMetodoDescontoTaxaEntr
         
         if(maiorPercentual > 0.0){
             double taxaEntrega = pedido.getTaxaEntrega();
-            pedido.aplicarDesconto(new CupomDescontoEntrega("Cupom por intervalo de data", (taxaEntrega * maiorPercentual)));
+            pedido.aplicarDescontoEntrega(new CupomDescontoEntrega("Cupom por intervalo de data", (taxaEntrega * maiorPercentual)));
         }     
     }
 

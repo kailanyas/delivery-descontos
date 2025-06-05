@@ -26,7 +26,7 @@ public class MetodoDescontoTaxaPorTipoCliente implements IMetodoDescontoTaxaEntr
     
     @Override
     public void calcularDesconto(Pedido pedido) {
-        pedido.aplicarDesconto(new CupomDescontoEntrega("Desconto por tipo de cliente", descontosPorTipoCliente.get(pedido.getCliente().getTipo())));
+        pedido.aplicarDescontoEntrega(new CupomDescontoEntrega("Desconto por tipo de cliente", descontosPorTipoCliente.get(pedido.getCliente().getTipo())));
     }
 
     @Override
