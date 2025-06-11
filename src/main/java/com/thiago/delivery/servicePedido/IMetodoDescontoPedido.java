@@ -11,5 +11,5 @@ import com.thiago.delivery.model.Pedido;
  * @author thiago.silva.66
  */
 public interface IMetodoDescontoPedido {
-    public void calcularDesconto(Pedido pedido, String cupomDigitado);
+    public void calcularDesconto(Pedido pedido);
 }

@@ -114,4 +114,13 @@ public class Pedido {
         return valorTotal+taxaEntrega;
     }
     
+    public void setCupomDescontoPedido(CupomDescontoPedido cupomPedido){
+        this.cupomPedido = cupomPedido;
+    }
+
+    public CupomDescontoPedido getCupomPedido() {
+        return cupomPedido;
+    }
+    
+    
 }

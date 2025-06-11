@@ -22,4 +22,22 @@ public class CalculadoraDescontoPedidoService {
     public void calcularDesconto(Pedido pedido, String cupomDigitado){
         metodoDescontoPedido.calcularDesconto(pedido, cupomDigitado);
     }
+    
+    public class CalculadoraDeDescontoPedidoService {
+
+    public void aplicarDesconto(IRegraDesconto regraDesconto, Pedido pedido) {
+        if (regraDesconto == null) {
+            throw new IllegalArgumentException("Informe uma regra de desconto válida!");
+        }
+        if (pedido == null) {
+            throw new IllegalArgumentException("Informe um pedido válido!");
+        }
+
+        if (pedido.getValor == 0) {
+            throw new IllegalArgumentException("Não é possível aplicar descontos em pedidos com valor total = 0");
+        }
+
+        regraDesconto.calcular(pedido);
+    }
+}
 }

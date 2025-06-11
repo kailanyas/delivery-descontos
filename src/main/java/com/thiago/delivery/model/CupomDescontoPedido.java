@@ -13,10 +13,9 @@ public class CupomDescontoPedido {
     private double percentualDesconto = 0;
     private double valorDescontoPedido = 0;
 
-    public CupomDescontoPedido(String nomeCupom, double percentualDesconto, double valorDescontoPedido) {
+    public CupomDescontoPedido(String nomeCupom, double percentualDesconto) {
         this.nomeCupom = nomeCupom;
         this.percentualDesconto = percentualDesconto;
-        this.valorDescontoPedido = valorDescontoPedido;
     }
 
     public String getNomeCupom() {
@@ -30,7 +29,11 @@ public class CupomDescontoPedido {
     public double getValorDescontoPedido() {
         return valorDescontoPedido;
     }
-
+    
+    public void setValorDescontoPedido(double valorDesconto){
+        this.valorDescontoPedido = valorDesconto;
+    }
+    
     @Override
     public String toString() {
         return "CupomDescontoPedido{" + "nomeCupom=" + nomeCupom + ", percentualDesconto=" + percentualDesconto + ", valorDescontoPedido=" + valorDescontoPedido + '}';
