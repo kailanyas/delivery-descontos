@@ -4,6 +4,7 @@ C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main
 C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\model\CupomDescontoPedido.java
 C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\model\Item.java
 C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\model\Pedido.java
+C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\repository\CupomDescontoRepository.java
 C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\CalculadoraDeDescontoService.java
 C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\IMetodoDescontoTaxaEntrega.java
 C:\Users\thiag\OneDrive\Documentos\DeliveryDescontos\delivery-descontos\src\main\java\com\thiago\delivery\service\MetodoDescontoPorDiaDaSemana.java

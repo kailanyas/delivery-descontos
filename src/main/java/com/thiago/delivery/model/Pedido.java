@@ -72,13 +72,13 @@ public class Pedido {
     public void aplicarDescontoPedido(CupomDescontoPedido desconto){
         
         if(cupomPedido == null){
-            valorTotalPedido = getValorPedido();
+            valorTotalPedido = getValorTotalPedido();
             double valorDescontoPedido = desconto.getValorDescontoPedido();
             cupomPedido = desconto;
             valorTotalPedido -= valorDescontoPedido;
         }
         else if(desconto.getPercentualDesconto() > cupomPedido.getPercentualDesconto()){
-            valorTotalPedido = getValorPedido();
+            valorTotalPedido = getValorTotalPedido();
             double valorDescontoPedido = desconto.getValorDescontoPedido();
             cupomPedido = desconto;
             valorTotalPedido -= valorDescontoPedido;
@@ -106,7 +106,7 @@ public class Pedido {
     }
 
     
-    public double getValorPedido(){  
+    public double getValorTotalPedido(){  
         double valorTotal = 0;
         for(Item item : itens){
             valorTotal += item.getValorTotal();

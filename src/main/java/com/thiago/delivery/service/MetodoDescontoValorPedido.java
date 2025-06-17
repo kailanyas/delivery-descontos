@@ -25,7 +25,7 @@ public class MetodoDescontoValorPedido implements IMetodoDescontoTaxaEntrega {
 
     @Override
     public boolean seAplica(Pedido pedido) {
-        if(pedido.getValorPedido() > 200.0){
+        if(pedido.getValorTotalPedido() > 200.0){
             return true;
         }
         return false;

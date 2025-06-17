@@ -5,6 +5,7 @@
 package com.thiago.delivery.repository;
 
 import com.thiago.delivery.model.CupomDescontoPedido;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ import java.util.List;
  * @author thiag
  */
 public class CupomDescontoRepository {
-    private List<CupomDescontoPedido> cuponsValidos;
+    private List<CupomDescontoPedido> cuponsValidos = new ArrayList<>();
 
     public CupomDescontoRepository() {
         cuponsValidos.add(new CupomDescontoPedido("NATALFELIZ", 10));

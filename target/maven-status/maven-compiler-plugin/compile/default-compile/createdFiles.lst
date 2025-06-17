@@ -9,6 +9,7 @@ com\thiago\delivery\servicePedido\CalculadoraDescontoPedidoService.class
 com\thiago\delivery\model\Pedido.class
 com\thiago\delivery\service\MetodoDescontoValorPedido.class
 com\thiago\delivery\servicePedido\IMetodoDescontoPedido.class
+com\thiago\delivery\repository\CupomDescontoRepository.class
 com\thiago\delivery\Delivery.class
 com\thiago\delivery\service\MetodoDescontoPorDiaDaSemana.class
 com\thiago\delivery\service\CalculadoraDeDescontoService.class
