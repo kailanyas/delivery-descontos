@@ -53,41 +53,17 @@ public class Pedido {
             return;
         }
         else{
-        //double valorFinal = Math.min(valorDesconto, descontoDisponivel);
             if(desconto.getValorDesconto() <= descontoDisponivel){
                 cupons.add(desconto);
                 taxaEntrega -= desconto.getValorDesconto();
-                System.out.println(taxaEntrega);
-                System.out.println(desconto.getValorDesconto());
             }
             else {
                 cupons.add(desconto);
                 taxaEntrega -= descontoDisponivel;
-                System.out.println(taxaEntrega);
-                System.out.println(descontoDisponivel);
             }
         }
     }
-    
-    public void aplicarDescontoPedido(CupomDescontoPedido desconto){
-        
-        if(cupomPedido == null){
-            valorTotalPedido = getValorTotalPedido();
-            double valorDescontoPedido = desconto.getValorDescontoPedido();
-            cupomPedido = desconto;
-            valorTotalPedido -= valorDescontoPedido;
-        }
-        else if(desconto.getPercentualDesconto() > cupomPedido.getPercentualDesconto()){
-            valorTotalPedido = getValorTotalPedido();
-            double valorDescontoPedido = desconto.getValorDescontoPedido();
-            cupomPedido = desconto;
-            valorTotalPedido -= valorDescontoPedido;
-        }
-        else {
-            System.out.println("Já existe um cupom de percentual maior aplicado");
-        }
-    }
-    
+
     public double getDescontoConcedido(){
         return (10.00 - getTaxaEntrega());
     }
@@ -100,27 +76,30 @@ public class Pedido {
         return this.cupomPedido;
     }
 
-    @Override
-    public String toString() {
-        return "Pedido{" + "taxaEntrega=" + getTaxaEntrega() + ", cupomPedido=" + cupomPedido + ", valorTotalPedido=" + valorTotalPedido + '}';
+    public double calculaValorTotalItens(){
+        double total = 0;
+        for(Item item : itens){
+            total += item.getValorTotal();
+        }
+        return total;
     }
 
-    
-    public double getValorTotalPedido(){  
-        double valorTotal = 0;
-        for(Item item : itens){
-            valorTotal += item.getValorTotal();
-        }
-        return valorTotal+taxaEntrega;
+    public double getValorTotalPedido(){
+       valorTotalPedido = calculaValorTotalItens();
+       return valorTotalPedido + taxaEntrega;
     }
-    
+
+    public void aplicarDescontoPedido(CupomDescontoPedido desconto){
+        valorTotalPedido -= desconto.getValorDescontoPedido();
+    }
+
     public void setCupomDescontoPedido(CupomDescontoPedido cupomPedido){
         this.cupomPedido = cupomPedido;
     }
 
-    public CupomDescontoPedido getCupomPedido() {
-        return cupomPedido;
+    @Override
+    public String toString() {
+        return "Pedido{" + "taxaEntrega=" + getTaxaEntrega() + ", cupomPedido=" + cupomPedido + ", valorTotalPedido=" + valorTotalPedido + '}';
     }
-    
     
 }

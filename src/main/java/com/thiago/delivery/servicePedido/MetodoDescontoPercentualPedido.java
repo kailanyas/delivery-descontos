@@ -5,6 +5,7 @@ package com.thiago.delivery.servicePedido;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+import com.thiago.delivery.model.CupomDescontoEntrega;
 import com.thiago.delivery.model.CupomDescontoPedido;
 import com.thiago.delivery.model.Pedido;
 import com.thiago.delivery.repository.CupomDescontoRepository;
@@ -34,11 +35,13 @@ public class MetodoDescontoPercentualPedido implements IMetodoDescontoPedido{
 
         if (cupomExistente == null) {
             pedido.setCupomDescontoPedido(novoCupom);
+            pedido.aplicarDescontoPedido(novoCupom);
             return;
         }
 
         if (novoCupom.getPercentualDesconto() > cupomExistente.getPercentualDesconto()) {
             pedido.setCupomDescontoPedido(novoCupom);
+            pedido.aplicarDescontoPedido(novoCupom);
         }
     }
 
